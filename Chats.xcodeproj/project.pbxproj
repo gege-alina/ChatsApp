@@ -8,12 +8,16 @@
 
 /* Begin PBXBuildFile section */
 		2E5612F71F8A67F60017727C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5612F61F8A67F60017727C /* AppDelegate.swift */; };
-		2E5612F91F8A67F60017727C /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5612F81F8A67F60017727C /* ViewController.swift */; };
+		2E5612F91F8A67F60017727C /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5612F81F8A67F60017727C /* LoadingScreen.swift */; };
 		2E5612FC1F8A67F60017727C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5612FA1F8A67F60017727C /* Main.storyboard */; };
 		2E5612FE1F8A67F60017727C /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 2E5612FD1F8A67F60017727C /* Assets.xcassets */; };
 		2E5613011F8A67F60017727C /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5612FF1F8A67F60017727C /* LaunchScreen.storyboard */; };
 		2E56130C1F8A67F60017727C /* ChatsTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E56130B1F8A67F60017727C /* ChatsTests.swift */; };
 		2E5613171F8A67F60017727C /* ChatsUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5613161F8A67F60017727C /* ChatsUITests.swift */; };
+		2E5613251F8A70030017727C /* ChatsTableVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5613241F8A70030017727C /* ChatsTableVC.swift */; };
+		2E5613271F8A713B0017727C /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5613261F8A713B0017727C /* Constants.swift */; };
+		2E5613291F8A75D40017727C /* Chat.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5613281F8A75D40017727C /* Chat.swift */; };
+		2E88E8631F8C0D3A00D191EF /* Chats.plist in Resources */ = {isa = PBXBuildFile; fileRef = 2E88E8621F8C0D3A00D191EF /* Chats.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -36,7 +40,7 @@
 /* Begin PBXFileReference section */
 		2E5612F31F8A67F60017727C /* Chats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5612F61F8A67F60017727C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
-		2E5612F81F8A67F60017727C /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
+		2E5612F81F8A67F60017727C /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
 		2E5612FB1F8A67F60017727C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		2E5612FD1F8A67F60017727C /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		2E5613001F8A67F60017727C /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
@@ -47,6 +51,10 @@
 		2E5613121F8A67F60017727C /* ChatsUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = ChatsUITests.xctest; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5613161F8A67F60017727C /* ChatsUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsUITests.swift; sourceTree = "<group>"; };
 		2E5613181F8A67F60017727C /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		2E5613241F8A70030017727C /* ChatsTableVC.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatsTableVC.swift; sourceTree = "<group>"; };
+		2E5613261F8A713B0017727C /* Constants.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		2E5613281F8A75D40017727C /* Chat.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Chat.swift; sourceTree = "<group>"; };
+		2E88E8621F8C0D3A00D191EF /* Chats.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Chats.plist; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -97,12 +105,16 @@
 		2E5612F51F8A67F60017727C /* Chats */ = {
 			isa = PBXGroup;
 			children = (
+				2E88E8621F8C0D3A00D191EF /* Chats.plist */,
 				2E5612F61F8A67F60017727C /* AppDelegate.swift */,
-				2E5612F81F8A67F60017727C /* ViewController.swift */,
+				2E5612F81F8A67F60017727C /* LoadingScreen.swift */,
 				2E5612FA1F8A67F60017727C /* Main.storyboard */,
 				2E5612FD1F8A67F60017727C /* Assets.xcassets */,
 				2E5612FF1F8A67F60017727C /* LaunchScreen.storyboard */,
 				2E5613021F8A67F60017727C /* Info.plist */,
+				2E5613241F8A70030017727C /* ChatsTableVC.swift */,
+				2E5613261F8A713B0017727C /* Constants.swift */,
+				2E5613281F8A75D40017727C /* Chat.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -232,6 +244,7 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E88E8631F8C0D3A00D191EF /* Chats.plist in Resources */,
 				2E5613011F8A67F60017727C /* LaunchScreen.storyboard in Resources */,
 				2E5612FE1F8A67F60017727C /* Assets.xcassets in Resources */,
 				2E5612FC1F8A67F60017727C /* Main.storyboard in Resources */,
@@ -259,8 +272,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
-				2E5612F91F8A67F60017727C /* ViewController.swift in Sources */,
+				2E5613251F8A70030017727C /* ChatsTableVC.swift in Sources */,
+				2E5612F91F8A67F60017727C /* LoadingScreen.swift in Sources */,
 				2E5612F71F8A67F60017727C /* AppDelegate.swift in Sources */,
+				2E5613291F8A75D40017727C /* Chat.swift in Sources */,
+				2E5613271F8A713B0017727C /* Constants.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

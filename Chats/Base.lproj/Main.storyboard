@@ -1,24 +1,96 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13122.16" systemVersion="17A277" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="13196" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
+    <device id="retina4_7" orientation="portrait">
+        <adaptation id="fullscreen"/>
+    </device>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13104.12"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="13173"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
     <scenes>
-        <!--View Controller-->
+        <!--Loading Screen-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="LoadingScreen" customModule="Chats" customModuleProvider="target" sceneMemberID="viewController">
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="act1" translatesAutoresizingMaskIntoConstraints="NO" id="upx-0x-mAo">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                            </imageView>
+                        </subviews>
                         <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="upx-0x-mAo" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" id="6Lv-tt-48g"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="upx-0x-mAo" secondAttribute="trailing" id="fWY-EU-mDw"/>
+                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="upx-0x-mAo" secondAttribute="bottom" id="iqo-XI-Cg6"/>
+                            <constraint firstItem="upx-0x-mAo" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="xdv-H6-jdc"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                     </view>
+                    <connections>
+                        <outlet property="loadingImageView" destination="upx-0x-mAo" id="yuF-vP-ZNH"/>
+                        <segue destination="u07-kk-17T" kind="show" identifier="showChats" id="d3j-uM-wUm"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="36" y="33.733133433283363"/>
+        </scene>
+        <!--Chats TableVC-->
+        <scene sceneID="Ohl-7h-p8P">
+            <objects>
+                <viewController id="u07-kk-17T" customClass="ChatsTableVC" customModule="Chats" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="9e7-2p-cEE">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="uuQ-P1-L94">
+                                <rect key="frame" x="0.0" y="20" width="375" height="647"/>
+                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <prototypes>
+                                    <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatTableviewCell" rowHeight="89" id="vZF-Cr-Pao">
+                                        <rect key="frame" x="0.0" y="1" width="375" height="89"/>
+                                        <autoresizingMask key="autoresizingMask"/>
+                                        <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" insetsLayoutMarginsFromSafeArea="NO" tableViewCell="vZF-Cr-Pao" id="fCs-YL-Th9">
+                                            <rect key="frame" x="0.0" y="0.0" width="375" height="88.5"/>
+                                            <autoresizingMask key="autoresizingMask"/>
+                                            <subviews>
+                                                <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="5Ce-EP-DvV">
+                                                    <rect key="frame" x="17" y="9" width="107" height="71"/>
+                                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                                </imageView>
+                                            </subviews>
+                                        </tableViewCellContentView>
+                                    </tableViewCell>
+                                </prototypes>
+                                <connections>
+                                    <outlet property="dataSource" destination="u07-kk-17T" id="dfJ-DT-8jm"/>
+                                    <outlet property="delegate" destination="u07-kk-17T" id="iKs-JL-PQC"/>
+                                </connections>
+                            </tableView>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="M2W-eX-Qr2" firstAttribute="bottom" secondItem="uuQ-P1-L94" secondAttribute="bottom" id="04N-gq-oKS"/>
+                            <constraint firstItem="uuQ-P1-L94" firstAttribute="top" secondItem="M2W-eX-Qr2" secondAttribute="top" id="73d-Ot-Bhf"/>
+                            <constraint firstItem="M2W-eX-Qr2" firstAttribute="trailing" secondItem="uuQ-P1-L94" secondAttribute="trailing" id="I2f-zi-0r7"/>
+                            <constraint firstItem="uuQ-P1-L94" firstAttribute="leading" secondItem="M2W-eX-Qr2" secondAttribute="leading" id="mG2-Ku-hr9"/>
+                        </constraints>
+                        <viewLayoutGuide key="safeArea" id="M2W-eX-Qr2"/>
+                    </view>
+                    <connections>
+                        <outlet property="chatsTableView" destination="uuQ-P1-L94" id="gTM-DM-eUO"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="eii-FM-EuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="901.60000000000002" y="33.733133433283363"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="act1" width="43" height="57"/>
+    </resources>
 </document>
