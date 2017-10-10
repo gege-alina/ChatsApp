@@ -13,6 +13,9 @@ class CustomSegue: UIStoryboardSegue {
     override func perform() {
     let firstVCView = self.source.view as UIView!
     let secondVCView = self.destination.view as UIView!
+        
+        let vc = self.destination as! ChatsTableVC
+        vc.loadViewIfNeeded()
 
     // Get the screen width and height.
     let screenWidth = UIScreen.main.bounds.size.width
@@ -29,11 +32,11 @@ class CustomSegue: UIStoryboardSegue {
         UIView.animate(withDuration:1.0, animations: { () -> Void in
             firstVCView?.alpha = 0.0
             firstVCView?.frame = CGRect(x: -0.25 * screenWidth, y: -0.25 * screenHeight, width: 1.5 * screenWidth, height: 1.5 * screenHeight)
-            secondVCView?.frame = CGRect(x: 0.0, y: 0.0, width: screenWidth, height: screenHeight)
-
+            secondVCView?.transform = CGAffineTransform(scaleX: 1.25, y: 1.25)
         }) { (Finished) -> Void in
             self.source.present(self.destination as UIViewController, animated: false, completion: nil)
         }
+        
     }
 
 }
