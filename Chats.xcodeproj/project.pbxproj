@@ -7,6 +7,9 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		2E4644C11F8CFACD005A971A /* ChatTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4644C01F8CFACD005A971A /* ChatTableViewCell.swift */; };
+		2E4644C61F8CFF6B005A971A /* Extensions.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4644C51F8CFF6B005A971A /* Extensions.swift */; };
+		2E4644C81F8D09CE005A971A /* CustomSegue.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E4644C71F8D09CE005A971A /* CustomSegue.swift */; };
 		2E5612F71F8A67F60017727C /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5612F61F8A67F60017727C /* AppDelegate.swift */; };
 		2E5612F91F8A67F60017727C /* LoadingScreen.swift in Sources */ = {isa = PBXBuildFile; fileRef = 2E5612F81F8A67F60017727C /* LoadingScreen.swift */; };
 		2E5612FC1F8A67F60017727C /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 2E5612FA1F8A67F60017727C /* Main.storyboard */; };
@@ -38,6 +41,9 @@
 /* End PBXContainerItemProxy section */
 
 /* Begin PBXFileReference section */
+		2E4644C01F8CFACD005A971A /* ChatTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatTableViewCell.swift; sourceTree = "<group>"; };
+		2E4644C51F8CFF6B005A971A /* Extensions.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Extensions.swift; sourceTree = "<group>"; };
+		2E4644C71F8D09CE005A971A /* CustomSegue.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomSegue.swift; sourceTree = "<group>"; };
 		2E5612F31F8A67F60017727C /* Chats.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Chats.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		2E5612F61F8A67F60017727C /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		2E5612F81F8A67F60017727C /* LoadingScreen.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LoadingScreen.swift; sourceTree = "<group>"; };
@@ -82,6 +88,34 @@
 /* End PBXFrameworksBuildPhase section */
 
 /* Begin PBXGroup section */
+		2E4644C21F8CFC56005A971A /* Model */ = {
+			isa = PBXGroup;
+			children = (
+				2E5613281F8A75D40017727C /* Chat.swift */,
+			);
+			path = Model;
+			sourceTree = "<group>";
+		};
+		2E4644C31F8CFC69005A971A /* ChatsView */ = {
+			isa = PBXGroup;
+			children = (
+				2E5613241F8A70030017727C /* ChatsTableVC.swift */,
+				2E4644C01F8CFACD005A971A /* ChatTableViewCell.swift */,
+			);
+			path = ChatsView;
+			sourceTree = "<group>";
+		};
+		2E4644C41F8CFC79005A971A /* Helpers */ = {
+			isa = PBXGroup;
+			children = (
+				2E5613261F8A713B0017727C /* Constants.swift */,
+				2E88E8621F8C0D3A00D191EF /* Chats.plist */,
+				2E4644C51F8CFF6B005A971A /* Extensions.swift */,
+				2E4644C71F8D09CE005A971A /* CustomSegue.swift */,
+			);
+			path = Helpers;
+			sourceTree = "<group>";
+		};
 		2E5612EA1F8A67F60017727C = {
 			isa = PBXGroup;
 			children = (
@@ -105,16 +139,15 @@
 		2E5612F51F8A67F60017727C /* Chats */ = {
 			isa = PBXGroup;
 			children = (
-				2E88E8621F8C0D3A00D191EF /* Chats.plist */,
+				2E4644C41F8CFC79005A971A /* Helpers */,
+				2E4644C31F8CFC69005A971A /* ChatsView */,
+				2E4644C21F8CFC56005A971A /* Model */,
 				2E5612F61F8A67F60017727C /* AppDelegate.swift */,
 				2E5612F81F8A67F60017727C /* LoadingScreen.swift */,
 				2E5612FA1F8A67F60017727C /* Main.storyboard */,
 				2E5612FD1F8A67F60017727C /* Assets.xcassets */,
 				2E5612FF1F8A67F60017727C /* LaunchScreen.storyboard */,
 				2E5613021F8A67F60017727C /* Info.plist */,
-				2E5613241F8A70030017727C /* ChatsTableVC.swift */,
-				2E5613261F8A713B0017727C /* Constants.swift */,
-				2E5613281F8A75D40017727C /* Chat.swift */,
 			);
 			path = Chats;
 			sourceTree = "<group>";
@@ -272,11 +305,14 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				2E4644C81F8D09CE005A971A /* CustomSegue.swift in Sources */,
 				2E5613251F8A70030017727C /* ChatsTableVC.swift in Sources */,
 				2E5612F91F8A67F60017727C /* LoadingScreen.swift in Sources */,
 				2E5612F71F8A67F60017727C /* AppDelegate.swift in Sources */,
+				2E4644C11F8CFACD005A971A /* ChatTableViewCell.swift in Sources */,
 				2E5613291F8A75D40017727C /* Chat.swift in Sources */,
 				2E5613271F8A713B0017727C /* Constants.swift in Sources */,
+				2E4644C61F8CFF6B005A971A /* Extensions.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

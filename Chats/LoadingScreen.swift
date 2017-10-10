@@ -35,7 +35,7 @@ class LoadingScreen: UIViewController {
         images = [loading_1, loading_2, loading_3, loading_4, loading_5, loading_6]
         animatedImage = UIImage.animatedImage(with: images, duration: 1.0)
         loadingImageView.image = animatedImage
-        self.perform(#selector(stopAnimation), with: nil, afterDelay: 2.0)
+        self.perform(#selector(stopAnimation), with: nil, afterDelay: 0.5)
         
     }
 
@@ -48,7 +48,5 @@ class LoadingScreen: UIViewController {
         loadingImageView.image = nil
         self.performSegue(withIdentifier: Constants.showChatsSegue, sender: nil)
     }
-
-
 }
 

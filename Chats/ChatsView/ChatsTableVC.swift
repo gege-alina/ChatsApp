@@ -23,42 +23,20 @@ class ChatsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
                 chatsArray?.append(newChat)
                 
             }
-            print(chatsArray ?? [])
         }
-        
-//        //get the path of the plist file
-//        guard let plistPath = Bundle.main.path(forResource: "data", ofType: "plist") else { return }
-//        //load the plist as data in memory
-//        guard let plistData = FileManager.default.contents(atPath: plistPath) else { return }
-//        //use the format of a property list (xml)
-//        var format = PropertyListSerialization.PropertyListFormat.xml
-//        //convert the plist data to a Swift Dictionary
-//        guard let  plistDict = try! PropertyListSerialization.propertyList(from: plistData, options: .mutableContainersAndLeaves, format: &format) as? [String : AnyObject] else { return }
-//        //access the values in the dictionary
-//        if let value = plistDict["aKey"] as? String {
-//            //do something with your value
-//            print(value)
-//        }
-//        //you can also use the coalesce operator to handle possible nil values
-//        var myValue = plistDict["aKey"] ?? ""
-//
-        
     }
 
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
     }
 
     // MARK: - Table view data source
 
     func numberOfSections(in tableView: UITableView) -> Int {
-        // #warning Incomplete implementation, return the number of sections
         return 1
     }
 
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
-        // #warning Incomplete implementation, return the number of rows
         if let chats = chatsArray {
             return chats.count
         }
@@ -67,9 +45,9 @@ class ChatsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
-        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.tableViewCellIdentifier, for: indexPath)
+        let cell = tableView.dequeueReusableCell(withIdentifier: Constants.tableViewCellIdentifier, for: indexPath) as! ChatTableViewCell
 
-        cell.textLabel?.text = chatsArray![indexPath.row].message
+        cell.configureWithChat(chatsArray![indexPath.row])
 
         return cell
     }
