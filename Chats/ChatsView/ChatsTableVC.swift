@@ -59,7 +59,7 @@ class ChatsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 
     private func getChats() {
         let apiManager = APIManager()
-        apiManager.getChats(withURL: Constants.URL) {
+        apiManager.getChats(withURL: Constants.URL) {_ in
             //save chats from server into chatsArray
         }
     }

@@ -50,7 +50,7 @@
                         <subviews>
                             <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" allowsSelection="NO" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="1" sectionFooterHeight="1" translatesAutoresizingMaskIntoConstraints="NO" id="uuQ-P1-L94">
                                 <rect key="frame" x="0.0" y="20" width="375" height="647"/>
-                                <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
+                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                 <prototypes>
                                     <tableViewCell clipsSubviews="YES" contentMode="scaleToFill" selectionStyle="default" indentationWidth="10" reuseIdentifier="chatTableviewCell" rowHeight="108" id="vZF-Cr-Pao" customClass="ChatTableViewCell" customModule="Chats" customModuleProvider="target">
                                         <rect key="frame" x="0.0" y="1" width="375" height="108"/>
@@ -110,6 +110,7 @@
                                                 <constraint firstItem="ruK-uH-cCn" firstAttribute="leading" secondItem="Ypf-gS-d4b" secondAttribute="leading" id="teN-eL-UXb"/>
                                             </constraints>
                                         </tableViewCellContentView>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
                                         <connections>
                                             <outlet property="avatarImage" destination="5Ce-EP-DvV" id="3Oc-ff-4QV"/>
                                             <outlet property="messageLabel" destination="ruK-uH-cCn" id="a7u-LR-apb"/>
@@ -137,6 +138,7 @@
                     <navigationItem key="navigationItem" id="zP8-g0-QSE"/>
                     <connections>
                         <outlet property="chatsTableView" destination="uuQ-P1-L94" id="gTM-DM-eUO"/>
+                        <outlet property="view" destination="9e7-2p-cEE" id="45J-EN-nn1"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="eii-FM-EuJ" userLabel="First Responder" sceneMemberID="firstResponder"/>
