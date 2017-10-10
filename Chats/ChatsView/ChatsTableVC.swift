@@ -15,15 +15,8 @@ class ChatsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        chatsArray = [Chat]()
-        if let path = Bundle.main.path(forResource: "Chats", ofType: "plist"),
-            let allChats = NSArray(contentsOfFile: path) as? [Dictionary<String, Any>] {
-            for chat in allChats {
-                let newChat = Chat(dict: chat)
-                chatsArray?.append(newChat)
-                
-            }
-        }
+        readChatsFromFile()
+        //getChats()
     }
 
     override func didReceiveMemoryWarning() {
@@ -51,15 +44,23 @@ class ChatsTableVC: UIViewController, UITableViewDataSource, UITableViewDelegate
 
         return cell
     }
- 
-    /*
-    // MARK: - Navigation
 
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destinationViewController.
-        // Pass the selected object to the new view controller.
+    private func readChatsFromFile() {
+        chatsArray = [Chat]()
+        if let path = Bundle.main.path(forResource: Constants.fileName, ofType: Constants.fileExtension),
+            let allChats = NSArray(contentsOfFile: path) as? [Dictionary<String, Any>] {
+            for chat in allChats {
+                let newChat = Chat(dict: chat)
+                chatsArray?.append(newChat)
+
+            }
+        }
     }
-    */
 
+    private func getChats() {
+        let apiManager = APIManager()
+        apiManager.getChats(withURL: Constants.URL) {
+            //save chats from server into chatsArray
+        }
+    }
 }
